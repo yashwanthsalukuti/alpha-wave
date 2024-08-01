@@ -4,7 +4,7 @@ import { getProgress } from "./get-progress";
 
 type CourseWithProgressWithCategory = Course & {
   category: Category;
-  chapter: Chapter[];
+  chapters: { id: string }[];
   progress: number | null;
 };
 

@@ -25,7 +25,7 @@ import { Combobox } from "@/components/ui/combobox";
 interface CategoryFormProps {
   initialData: Course;
   courseId: string;
-  options: { label: string; value: string };
+  options: { label: string; value: string }[];
 }
 
 const formSchema = z.object({
@@ -103,7 +103,7 @@ const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox options={...options} {...field} />
+                    <Combobox options={options} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
